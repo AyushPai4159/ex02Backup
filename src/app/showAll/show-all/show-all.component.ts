@@ -2,7 +2,7 @@ import { Component, OnInit, signal, WritableSignal } from '@angular/core';
 import { CreateLinkService } from '../../create-link.service';
 import { Observable, Subscription } from 'rxjs';
 import { AsyncPipe } from '@angular/common';
-import { URLObject } from '/workspaces/ex02-link-share-ayushTheunc/src/app/create-link.service';
+import { URLObject } from '../../create-link.service';
 
 export interface ShowSubmission {
   data: URLObject[];
