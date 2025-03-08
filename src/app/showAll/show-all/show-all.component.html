@@ -1,0 +1,20 @@
+<div>
+  <div>
+    <table>
+      <tr>
+        <th>Resource Identifier</th>
+        <th>Type</th>
+        <th>Views</th>
+        <th>Expiration</th>
+      </tr>
+      @for (item of submittedValues()?.data; track item){
+      <tr>
+        <td>{{ item.resourceIdentifier }}</td>
+        <td>{{ item.type }}</td>
+        <td>{{ item.views }}</td>
+        <td>{{ item.expiration }}</td>
+      </tr>
+      }
+    </table>
+  </div>
+</div>

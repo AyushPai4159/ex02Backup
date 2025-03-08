@@ -37,6 +37,16 @@
       </div>
       }
     </div>
+    <div class="form-group">
+      <label for="resource">Vanity URL</label>
+      <textarea
+        id="resource"
+        formControlName="resource"
+        class="form-control"
+        rows="1"
+        placeholder="Enter a Vanity URL"
+      ></textarea>
+    </div>
 
     <button type="submit" class="btn">Create Shareable Link</button>
   </form>
@@ -48,8 +58,15 @@
       <div class="url-display">
         <p><strong>Resource Type:</strong> {{ submittedValues()?.type }}</p>
         <p><strong>Content:</strong> {{ submittedValues()?.content }}</p>
+        <p>
+          <strong>Vanity URL:</strong>
+          {{ submittedValues()?.resourceIdentifier }}
+        </p>
+
         <p class="todo-message">
-          TODO: Connect to API to generate shareable URL
+          <a href="{{ submittedValues()?.website }}">{{
+            submittedValues()?.website
+          }}</a>
         </p>
       </div>
     </div>
